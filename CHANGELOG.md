@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.  
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-02-13
+
+### Added
+- Colored output for password analysis
+
 ## [0.1.0] - 2026-02-13
 
 ### Added
@@ -13,4 +18,5 @@ This project follows [Semantic Versioning](https://semver.org/).
   - Offline and online crack time estimates
   - Warnings and improvement suggestions
 
+[0.1.1]: https://github.com/MustafaHakimzay/SecurePass-py/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/MustafaHakimzay/SecurePass-py/releases/tag/0.1.0
