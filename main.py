@@ -1,20 +1,35 @@
 from src.password_strength import analyse_password, print_analysis
 from src.password_generator import generate_password
 
-def option():
-    try:
-        user_choice = int(input('Enter 1 to generate a secure password, or 2 to analyse your password strength: '))
-        if user_choice == 1:
-            print(generate_password())
-        elif user_choice == 2:
-            password = input('\nEnter password: ')
-            analysis = analyse_password(password)
-            print_analysis(analysis)     
-        else:
-            print('Not a valid option.')
-    except ValueError:
-        print('Please only enter 1 or 2.')
+def show_menu():
+    print('\n=== Password Manager ===')
+    print('1 - Generate a secure password')
+    print('2 - Analyse password strength')
+    print('3 - Exit')
+
+    user_choice = input('Enter your choice: ')
+
+    if not user_choice.isdigit():
+        print('Please enter a valid option.')
+        return True
+    
+    user_choice = int(user_choice)
+
+    if user_choice == 1:
+        password = generate_password()
+        print(f'\nGenerated password: {password}')
+    elif user_choice == 2:
+        password = input(f'Enter password to analsye: ')
+        analysis = analyse_password(password)
+        print_analysis(analysis)  
+    elif user_choice == 3:
+        print('Exited')
+        return False
+    else:
+        print('Not a valid option. Please enter only 1, 2 or 3.')  
+
+    return True
 
 if __name__ == '__main__':
-    while True:
-        option()
+    while show_menu():
+        pass
